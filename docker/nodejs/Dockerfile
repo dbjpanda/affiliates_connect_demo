@@ -35,7 +35,7 @@ RUN npm install -g pm2
 RUN mkdir -p /var/www/node-scraper
 
 COPY entrypoint.sh /
-COPY ./scraper/ /var/www/node-scraper
+COPY ./node_crawler/ /var/www/node-scraper
 
 # Define working directory
 WORKDIR /var/www/node-scraper

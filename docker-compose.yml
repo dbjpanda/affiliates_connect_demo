@@ -6,7 +6,7 @@ services:
     container_name: ${PROJECT_NAME}
     image: dbjpanda/drupal-on-docker-php
     volumes:
-      - ./code:/var/www/${PROJECT_NAME}:cached
+      - ./drupal:/var/www/${PROJECT_NAME}:cached
     working_dir: /var/www/${PROJECT_NAME}
     networks:
       - drupal
@@ -15,7 +15,7 @@ services:
     container_name: ${PROJECT_NAME}.nginx
     image: dbjpanda/drupal-on-docker-nginx
     volumes:
-      - ./code:/var/www/${PROJECT_NAME}:cached
+      - ./drupal:/var/www/${PROJECT_NAME}:cached
     working_dir: /var/www/${PROJECT_NAME}
     environment:
       PROJECT_NAME: ${PROJECT_NAME}

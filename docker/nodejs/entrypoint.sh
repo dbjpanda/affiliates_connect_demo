@@ -1,0 +1,14 @@
+#!/bin/sh
+
+set -e
+
+cat >/var/www/node-scraper/.env << EOF
+
+NODE_ENV: $NODE_ENV
+PORT: $PORT
+PROCESS_TYPE: $PROCESS_TYPE
+NIGHTMARE_SHOW: $NIGHTMARE_SHOW
+NIGHTMARE_IMAGES: $NIGHTMARE_IMAGES
+EOF
+
+exec "$@"

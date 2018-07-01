@@ -1,0 +1,113 @@
+uuid: a533d151-04af-4ad7-8895-1334f3feea04
+langcode: en
+status: true
+dependencies:
+  module:
+    - affiliates_connect
+    - feeds_advance_crawler
+    - feeds_ex
+label: 'Amazon Feed'
+id: amazon_feed
+description: 'Crawl and Scrape'
+import_period: 3600
+fetcher: advance_crawler
+fetcher_configuration:
+  fetcher_type: dynamic_fetcher
+parser: html
+parser_configuration:
+  context:
+    value: '//li[@class=''s-result-item celwidget  '']'
+  sources:
+    product_name:
+      label: './div/div[@class="a-fixed-left-grid"]/div[@class="a-fixed-left-grid-inner"]/div[@class="a-fixed-left-grid-col a-col-right"]/div/div/a/h2/text()'
+      value: './div/div[@class="a-fixed-left-grid"]/div[@class="a-fixed-left-grid-inner"]/div[@class="a-fixed-left-grid-col a-col-right"]/div/div/a/h2/text()'
+    product_page_url:
+      label: './div/div[@class="a-fixed-left-grid"]/div[@class="a-fixed-left-grid-inner"]/div[@class="a-fixed-left-grid-col a-col-right"]/div/div/a[@class="a-link-normal s-access-detail-page  s-color-twister-title-link a-text-normal"]/@href'
+      value: './div/div[@class="a-fixed-left-grid"]/div[@class="a-fixed-left-grid-inner"]/div[@class="a-fixed-left-grid-col a-col-right"]/div/div/a[@class="a-link-normal s-access-detail-page  s-color-twister-title-link a-text-normal"]/@href'
+    product_offers:
+      label: './affiliatesconnect//div[@id="quickPromoBucketContent"]/div/ul/li'
+      value: './affiliatesconnect//div[@id="quickPromoBucketContent"]/div/ul/li'
+  use_tidy: false
+  display_errors: false
+  source_encoding:
+    - auto
+  debug_mode: false
+  line_limit: 100
+processor: 'entity:affiliates_product'
+processor_configuration:
+  update_existing: 0
+  update_non_existent: _keep
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+  authorize: true
+  skip_hash_check: false
+  values: {  }
+custom_sources:
+  product_name:
+    label: './div/div[@class="a-fixed-left-grid"]/div[@class="a-fixed-left-grid-inner"]/div[@class="a-fixed-left-grid-col a-col-right"]/div/div/a/h2/text()'
+    value: './div/div[@class="a-fixed-left-grid"]/div[@class="a-fixed-left-grid-inner"]/div[@class="a-fixed-left-grid-col a-col-right"]/div/div/a/h2/text()'
+    machine_name: product_name
+  product_url:
+    label: './div/div[@class="a-fixed-left-grid"]/div[@class="a-fixed-left-grid-inner"]/div[@class="a-fixed-left-grid-col a-col-right"]/div/div/a[@class="a-link-normal s-access-detail-page  s-color-twister-title-link a-text-normal"]/@href'
+    value: './div/div[@class="a-fixed-left-grid"]/div[@class="a-fixed-left-grid-inner"]/div[@class="a-fixed-left-grid-col a-col-right"]/div/div/a[@class="a-link-normal s-access-detail-page  s-color-twister-title-link a-text-normal"]/@href'
+    machine_name: product_url
+  product_page_url:
+    label: './div/div[@class="a-fixed-left-grid"]/div[@class="a-fixed-left-grid-inner"]/div[@class="a-fixed-left-grid-col a-col-right"]/div/div/a[@class="a-link-normal s-access-detail-page  s-color-twister-title-link a-text-normal"]/@href'
+    value: './div/div[@class="a-fixed-left-grid"]/div[@class="a-fixed-left-grid-inner"]/div[@class="a-fixed-left-grid-col a-col-right"]/div/div/a[@class="a-link-normal s-access-detail-page  s-color-twister-title-link a-text-normal"]/@href'
+    machine_name: product_page_url
+  product_offers:
+    label: './affiliatesconnect//div[@id="quickPromoBucketContent"]/div/ul/li'
+    value: './affiliatesconnect//div[@id="quickPromoBucketContent"]/div/ul/li'
+    machine_name: product_offers
+mappings:
+  -
+    target: name
+    map:
+      value: product_name
+    unique:
+      value: '1'
+
+  -
+    target: product_id
+    map:
+      value: product_name
+
+  -
+    target: currency
+    map:
+      value: product_name
+
+  -
+    target: maximum_retail_price
+    map:
+      value: product_name
+
+  -
+    target: vendor_selling_price
+    map:
+      value: product_name
+
+  -
+    target: vendor_special_price
+    map:
+      value: product_name
+
+  -
+    target: product_brand
+    map:
+      value: product_name
+
+  -
+    target: seller_name
+    map:
+      value: product_name
+
+  -
+    target: product_url
+    map:
+      value: product_page_url
+  -
+    target: offers
+    map:
+      value: product_offers

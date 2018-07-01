@@ -1,6 +1,3 @@
 [submodule "submodules/feeds_advance_crawler_backend"]
 	path = submodules/feeds_advance_crawler_backend
 	url = https://github.com/shibasisp/feeds_advance_crawler_backend.git
-[submodule "submodules/feeds_advance_crawler"]
-	path = submodules/feeds_advance_crawler
-	url = https://github.com/dbjpanda/feeds_advance_crawler.git

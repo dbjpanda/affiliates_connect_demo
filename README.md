@@ -12,7 +12,7 @@ Installation of Drupal on development server
 ----------------------
 Step 1
 ``````
-git clone https://github.com/dbjpanda/drupal-on-docker.git
+git clone --recursive https://github.com/dbjpanda/drupal-on-docker.git
 ```````
 Step 2
 ````````

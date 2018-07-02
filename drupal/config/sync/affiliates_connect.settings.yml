@@ -1,0 +1,9 @@
+fallback_scraper: true
+save_searched_products: false
+cloaking: true
+enable_hits_analysis: true
+append_affiliate_id: true
+_core:
+  default_config_hash: I248kMFw-n2DTH8X4JqPuUFXv92YE5T9IOLwoQuNCo8
+nodejs_host: 'http://localhost'
+nodejs_port: '9000'

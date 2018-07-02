@@ -31,9 +31,30 @@ services:
     networks:
       - drupal
 
+  node:
+    container_name: ${PROJECT_NAME}.node
+    build: ./docker/nodejs/
+    image: node-scraper
+    volumes:
+      - ./node:/var/www/node-scraper:cached
+    working_dir: /var/www/node-scraper
+    environment:
+      NODE_ENV: ${NODE_ENV}
+      PORT: ${PORT}
+      PROCESS_TYPE: ${PROCESS_TYPE}
+      NIGHTMARE_SHOW: ${NIGHTMARE_SHOW}
+      NIGHTMARE_IMAGES: ${NIGHTMARE_IMAGES}
+    labels:
+      - "traefik.frontend.rule=Host:node.localhost"
+    networks:
+      - drupal
+    restart: always
+
   mariadb:
     container_name: ${PROJECT_NAME}.mariadb
     image: dbjpanda/drupal-on-docker-mariadb
+    volumes:
+      - ./drupal/db-dump/drupal.sql:/docker-entrypoint-initdb.d/dump.sql
     environment:
        MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
        MYSQL_DATABASE: ${MYSQL_DATABASE}

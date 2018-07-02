@@ -1,0 +1,20 @@
+uuid: 3294d4b1-a1e5-4d55-8760-d163f76f5059
+langcode: en
+status: true
+dependencies:
+  module:
+    - affiliates_connect
+    - feeds
+id: affiliates_product.feeds_item
+field_name: feeds_item
+entity_type: affiliates_product
+type: feeds_item
+settings:
+  target_type: feeds_feed
+module: feeds
+locked: false
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

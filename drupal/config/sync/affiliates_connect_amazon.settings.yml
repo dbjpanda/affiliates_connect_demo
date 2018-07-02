@@ -1,0 +1,19 @@
+native_api: true
+amazon_associate_id: null
+amazon_access_key: null
+amazon_secret_key: null
+scraper_api: true
+data_storage: true
+affiliate_import: null
+scraper_import: null
+content_scrape: true
+scrape_timer: null
+full_content: true
+reviews: true
+available: true
+size: true
+color: true
+offers: true
+others: true
+_core:
+  default_config_hash: 1hfSZ4l-WtturYxy8FMptT5zKHtlX18nEsNJZ3JZeuc

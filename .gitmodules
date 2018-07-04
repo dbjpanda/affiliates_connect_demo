@@ -1,0 +1,6 @@
+[submodule "submodules/advance_crawler"]
+	path = submodules/advance_crawler
+	url = https://github.com/dbjpanda/advance_crawler.git
+[submodule "code/drupal/web/modules/feeds_advance_crawler"]
+	path = code/drupal/web/modules/feeds_advance_crawler
+	url = https://github.com/dbjpanda/feeds_advance_crawler.git

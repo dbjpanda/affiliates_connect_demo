@@ -4,22 +4,24 @@ services:
 
   php:
     container_name: ${PROJECT_NAME}
+#    build: ./docker/php
     image: dbjpanda/drupal-on-docker-php
     volumes:
-      - ./code:/var/www/${PROJECT_NAME}:cached
+      - ./code/drupal:/var/www/${PROJECT_NAME}:cached
     working_dir: /var/www/${PROJECT_NAME}
     networks:
       - drupal
 
   nginx:
     container_name: ${PROJECT_NAME}.nginx
+#    build: ./docker/nginx
     image: dbjpanda/drupal-on-docker-nginx
     volumes:
-      - ./code:/var/www/${PROJECT_NAME}:cached
+      - ./code/drupal:/var/www/${PROJECT_NAME}:cached
     working_dir: /var/www/${PROJECT_NAME}
     environment:
       PROJECT_NAME: ${PROJECT_NAME}
-      DOMAIN_NAME: ${DOMAIN_NAME}
+      DOMAIN_NAME: ${DRUPAL_HOST_NAME}
       DRUPAL_VERSION: ${DRUPAL_VERSION}
       MYSQL_DATABASE: ${MYSQL_DATABASE}
       MYSQL_USER: ${MYSQL_USER}
@@ -27,18 +29,42 @@ services:
       MYSQL_HOST_NAME: ${PROJECT_NAME}.mariadb
       MYSQL_PORT: ${MYSQL_PORT}
     labels:
-      - "traefik.frontend.rule=Host:${DOMAIN_NAME}"
+      - "traefik.frontend.rule=Host:${DRUPAL_HOST_NAME}"
     networks:
       - drupal
 
   mariadb:
     container_name: ${PROJECT_NAME}.mariadb
+#    build: ./docker/mariadb
     image: dbjpanda/drupal-on-docker-mariadb
+    volumes:
+      - ./code/drupal/db-dump/drupal.sql:/docker-entrypoint-initdb.d/dump.sql
     environment:
        MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
        MYSQL_DATABASE: ${MYSQL_DATABASE}
     networks:
       - drupal
+
+  node:
+      container_name: ${PROJECT_NAME}.node
+#      build: ./docker/node/
+      image: dbjpanda/advance_crawler
+      volumes:
+        - ./code/node_crawler:/app:cached
+      working_dir: /app
+      environment:
+        - NODE_ENV:${NODE_ENV}
+        - PROCESS_TYPE:${PROCESS_TYPE}
+        - NIGHTMARE_SHOW:${NIGHTMARE_SHOW}
+        - NIGHTMARE_IMAGES:${NIGHTMARE_IMAGES}
+        - APP_PORT:${APP_PORT}
+      command: [sh, -c, "npm install && pm2-runtime process.json"]
+      labels:
+        - "traefik.frontend.rule=Host:${NODE_HOST_NAME}"
+        - "traefik.port=${APP_PORT}"
+      networks:
+        - drupal
+
 
 networks:
   drupal:

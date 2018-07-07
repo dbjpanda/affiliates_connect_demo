@@ -19,9 +19,13 @@
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6",
         "drupal-composer/drupal-scaffold": "^2.5",
+        "drupal/affiliates_connect": "1.x-dev",
         "drupal/console": "^1.0.2",
         "drupal/core": "~8.5.3",
-        "drupal/feeds_ex": "^1.0@alpha",
+        "drupal/feeds": "^3.0",
+        "drupal/feeds_ex": "^1.0",
+        "drupal/feeds_tamper": "2.x-dev",
+        "drupal/tamper": "1.x-dev",
         "drush/drush": "^9.0.0",
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",
@@ -66,6 +70,15 @@
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
             "drush/Commands/{$name}": ["type:drupal-drush"]
+        },
+        "patches": {
+            "drupal/affiliates_connect": {
+                "#2980130": "https://www.drupal.org/files/issues/2018-07-02/2980130-7.patch",
+                "#2984309": "https://www.drupal.org/files/issues/2018-07-06/2984309-2.patch",
+                "#2982833": "https://www.drupal.org/files/issues/2018-07-06/2982833-16.patch",
+                "#2984281": "https://www.drupal.org/files/issues/2018-07-06/2984281-2.patch",
+                "#2983176": "https://www.drupal.org/files/issues/2018-07-06/2983176-2.patch"
+            }
         }
     }
 }

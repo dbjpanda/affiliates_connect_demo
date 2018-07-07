@@ -38,7 +38,7 @@ services:
 #    build: ./docker/mariadb
     image: dbjpanda/drupal-on-docker-mariadb
     volumes:
-      - ./code/drupal/db-dump/drupal.sql:/docker-entrypoint-initdb.d/dump.sql
+      - ./code/drupal/db-dump/drupal-2018-07-07-15-29-59.sql:/docker-entrypoint-initdb.d/dump.sql
     environment:
        MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
        MYSQL_DATABASE: ${MYSQL_DATABASE}

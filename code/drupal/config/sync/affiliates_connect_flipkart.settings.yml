@@ -1,0 +1,18 @@
+native_api: true
+flipkart_tracking_id: ankitjain21
+flipkart_token: 361f75f247b4435396fbae559d7d21e0
+scraper_api: true
+data_storage: true
+affiliate_import: every_day
+scraper_import: every_day
+content_scrape: false
+scrape_timer: ''
+full_content: true
+reviews: true
+available: true
+size: true
+color: true
+offers: true
+others: true
+_core:
+  default_config_hash: d6QoPW28CIBM5FWXBV9qsNVE8pTup65TMMius4q3-zg

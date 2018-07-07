@@ -1,0 +1,25 @@
+uuid: 0f62f63e-ed42-4ed4-85b6-732aac46ef8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.affiliates_product.feeds_item
+  module:
+    - affiliates_connect
+    - feeds
+_core:
+  default_config_hash: 0-9Oi8Aq3XrWJTOyciKcfKueE0iZ4Ob4KiUrOeHDlxo
+id: affiliates_product.affiliates_product.feeds_item
+field_name: feeds_item
+entity_type: affiliates_product
+bundle: affiliates_product
+label: 'Feeds item'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:feeds_feed'
+  handler_settings: {  }
+field_type: feeds_item

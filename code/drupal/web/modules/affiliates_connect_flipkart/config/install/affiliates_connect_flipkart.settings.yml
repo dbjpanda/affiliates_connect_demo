@@ -1,16 +1,11 @@
-native_api: true
+native_api: false
 flipkart_tracking_id:
 flipkart_token:
-scraper_api: true
-data_storage: true
-affiliate_import:
-scraper_import:
-content_scrape: true
-scrape_timer:
-full_content: true
-reviews: true
-available: true
-size: true
-color: true
-offers: true
-others: true
+data_storage: false
+import:
+full_content: false
+price: false
+available: false
+size: false
+color: false
+offers: false

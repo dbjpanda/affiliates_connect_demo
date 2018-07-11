@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4c299d68a03859d3efe2cfef442411ad",
+    "content-hash": "998d626b64697c4c70495aa062079943",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1439,6 +1439,13 @@
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
                     }
+                },
+                "patches_applied": {
+                    "#2980130": "https://www.drupal.org/files/issues/2018-07-02/2980130-7.patch",
+                    "#2984309": "https://www.drupal.org/files/issues/2018-07-06/2984309-2.patch",
+                    "#2982833": "https://www.drupal.org/files/issues/2018-07-06/2982833-16.patch",
+                    "#2984281": "https://www.drupal.org/files/issues/2018-07-06/2984281-2.patch",
+                    "#2983176": "https://www.drupal.org/files/issues/2018-07-06/2983176-2.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",

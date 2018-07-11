@@ -45,6 +45,12 @@ docker exec -it PROJECT_NAME drush config-import
 Step 6
 
 ```
+docker exec -it PROJECT_NAME drush user:password admin "your pass"
+```
+
+Step 7
+
+```
 docker exec -it PROJECT_NAME drush cr
 ```
 

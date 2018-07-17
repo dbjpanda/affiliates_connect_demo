@@ -25,6 +25,7 @@
         "drupal/feeds": "^3.0",
         "drupal/feeds_ex": "^1.0",
         "drupal/feeds_tamper": "2.x-dev",
+        "drupal/robotstxt": "^1.2",
         "drupal/tamper": "1.x-dev",
         "drush/drush": "^9.0.0",
         "vlucas/phpdotenv": "^2.4",

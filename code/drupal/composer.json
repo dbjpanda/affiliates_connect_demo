@@ -74,13 +74,14 @@
         "patches": {
             "drupal/affiliates_connect": {
                 "#2980130": "https://www.drupal.org/files/issues/2018-07-02/2980130-7.patch",
-                "#2984309": "https://www.drupal.org/files/issues/2018-07-06/2984309-3.patch",
+                "#2984309": "https://www.drupal.org/files/issues/2018-07-08/2984309-3.patch",
                 "#2982833": "https://www.drupal.org/files/issues/2018-07-06/2982833-16.patch",
                 "#2984281": "https://www.drupal.org/files/issues/2018-07-06/2984281-2.patch",
                 "#2983176": "https://www.drupal.org/files/issues/2018-07-06/2983176-2.patch",
-                "#2984462": "https://www.drupal.org/files/issues/2018-07-08/2984462-4.patch",
+                "#2984462": "https://www.drupal.org/files/issues/2018-07-11/2984462-4.patch",
                 "#2984980": "https://www.drupal.org/files/issues/2018-07-11/2984980-2.patch",
-                "#2979372": "https://www.drupal.org/files/issues/2018-07-11/2979372-17.patch"
+                "#2979372": "https://www.drupal.org/files/issues/2018-07-11/2979372-17.patch",
+                "#2985796": "https://www.drupal.org/files/issues/2018-07-17/2985796-8.patch"
             }
         }
     }

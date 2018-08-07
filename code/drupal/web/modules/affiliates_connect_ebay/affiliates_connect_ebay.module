@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains affiliates_connect_ebay.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function affiliates_connect_ebay_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the affiliates_connect_ebay module.
+    case 'help.page.affiliates_connect_ebay':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Allows integration with Ebay Product Advertising API') . '</p>';
+      return $output;
+
+    default:
+  }
+}

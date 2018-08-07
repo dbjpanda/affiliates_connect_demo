@@ -1,0 +1,9 @@
+affiliates_connect_ebay.settings:
+  route_name: affiliates_connect_ebay.settings
+  title: 'Affiliates Connect Ebay Settings'
+  base_route: affiliates_connect_ebay.settings
+
+affiliates_connect_ebay.search:
+  route_name: affiliates_connect_ebay.search
+  title: 'Search'
+  base_route: affiliates_connect_ebay.settings

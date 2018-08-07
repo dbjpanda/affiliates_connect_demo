@@ -22,6 +22,8 @@
         "drupal/affiliates_connect": "1.x-dev",
         "drupal/console": "^1.0.2",
         "drupal/core": "~8.5.3",
+        "drupal/ctools": "^3.0",
+        "drupal/entity_browser": "^2.0",
         "drupal/feeds": "^3.0",
         "drupal/feeds_ex": "^1.0",
         "drupal/feeds_tamper": "2.x-dev",
@@ -77,12 +79,14 @@
                 "#2980130": "https://www.drupal.org/files/issues/2018-07-02/2980130-7.patch",
                 "#2984309": "https://www.drupal.org/files/issues/2018-07-08/2984309-3.patch",
                 "#2982833": "https://www.drupal.org/files/issues/2018-07-06/2982833-16.patch",
-                "#2984281": "https://www.drupal.org/files/issues/2018-07-06/2984281-2.patch",
-                "#2983176": "https://www.drupal.org/files/issues/2018-07-06/2983176-2.patch",
-                "#2984462": "https://www.drupal.org/files/issues/2018-07-11/2984462-4.patch",
+                "#2984281": "https://www.drupal.org/files/issues/2018-08-02/2984281-3.patch",
+                "#2983176": "https://www.drupal.org/files/issues/2018-08-06/2983176-6.patch",
+                "#2984462": "https://www.drupal.org/files/issues/2018-07-13/2984462-5.patch",
                 "#2984980": "https://www.drupal.org/files/issues/2018-07-11/2984980-2.patch",
-                "#2979372": "https://www.drupal.org/files/issues/2018-07-11/2979372-17.patch",
-                "#2985796": "https://www.drupal.org/files/issues/2018-07-17/2985796-8.patch"
+                "#2979372": "https://www.drupal.org/files/issues/2018-07-13/2979372-20.patch",
+                "#2985796": "https://www.drupal.org/files/issues/2018-07-25/2985796-11.patch",
+                "#2987416": "https://www.drupal.org/files/issues/2018-08-07/2987416-11.patch",
+                "#2990538": "https://www.drupal.org/files/issues/2018-08-03/2990538-2.patch"
             }
         }
     }

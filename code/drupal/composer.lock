@@ -1687,8 +1687,8 @@
                     "#2984980": "https://www.drupal.org/files/issues/2018-07-11/2984980-2.patch",
                     "#2979372": "https://www.drupal.org/files/issues/2018-07-13/2979372-20.patch",
                     "#2985796": "https://www.drupal.org/files/issues/2018-07-25/2985796-11.patch",
-                    "#2987416": "https://www.drupal.org/files/issues/2018-08-07/2987416-11.patch",
-                    "#2990538": "https://www.drupal.org/files/issues/2018-08-03/2990538-2.patch"
+                    "#2987416": "https://www.drupal.org/files/issues/2018-08-09/2987416-13.patch",
+                    "#2990538": "https://www.drupal.org/files/issues/2018-08-09/2990538-7.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",

@@ -8,11 +8,21 @@ affiliates_connect_flipkart.settings:
   options:
     _admin_route: TRUE
 
-affiliates_connect_flipkart.fetch:
-  path: 'admin/config/affiliates-connect-flipkart/categories'
+affiliates_connect_flipkart.search:
+  path: '/admin/config/affiliates-connect-flipkart/search'
+  defaults:
+    _form: '\Drupal\affiliates_connect_flipkart\Form\FlipkartItemSearchForm'
+    _title: 'Flipkart Products Search Form'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+
+affiliates_connect_flipkart.batch_import:
+  path: 'admin/config/affiliates-connect-flipkart/batch-processing'
   defaults:
     _title: 'Affiliates Connect Flipkart'
-    _controller: 'Drupal\affiliates_connect_flipkart\Controller\FlipkartNativeController::categories'
+    _controller: 'Drupal\affiliates_connect_flipkart\Controller\FlipkartNativeController::startBatch'
   requirements:
     _permission: 'access administration pages'
   options:

@@ -1,9 +1,9 @@
 native_api: false
-flipkart_tracking_id: flipkart_tracking_id
-flipkart_token: flipkart_token
+locale: IN
+ebay_app_id: ebay_app_id
+service_endpoint: production
 search: false
-data_storage: false
-import:
+data_storage:
 full_content: false
 price: false
 available: false

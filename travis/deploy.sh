@@ -4,7 +4,7 @@
 set -xe
 
 cd /var/www/html/affiliates_connect
-echo "Branch change to master
+echo "Branch change to master"
 sudo git checkout master
 echo "Pulling changes from Git"
 sudo git pull origin master

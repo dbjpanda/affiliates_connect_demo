@@ -4,7 +4,7 @@
 set -xe
 
 cd /var/www/html/affiliates_connect_demo
-echo "Branch change to dev
+echo "Branch change to dev"
 sudo git checkout dev
 echo "Pulling changes from Git"
 sudo git pull origin dev

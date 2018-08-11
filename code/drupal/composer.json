@@ -28,6 +28,9 @@
         "drupal/feeds_ex": "^1.0",
         "drupal/feeds_tamper": "2.x-dev",
         "drupal/robotstxt": "^1.2",
+        "drupal/search_api": "1.x-dev",
+        "drupal/search_api_page": "1.x-dev",
+        "drupal/entity_comparison": "1.x-dev",
         "drupal/tamper": "1.x-dev",
         "drush/drush": "^9.0.0",
         "vlucas/phpdotenv": "^2.4",
@@ -86,7 +89,8 @@
                 "#2979372": "https://www.drupal.org/files/issues/2018-07-13/2979372-20.patch",
                 "#2985796": "https://www.drupal.org/files/issues/2018-07-25/2985796-11.patch",
                 "#2987416": "https://www.drupal.org/files/issues/2018-08-09/2987416-13.patch",
-                "#2990538": "https://www.drupal.org/files/issues/2018-08-09/2990538-7.patch"
+                "#2990538": "https://www.drupal.org/files/issues/2018-08-09/2990538-7.patch",
+                "#2991976": "https://www.drupal.org/files/issues/2018-08-10/2991976-2.patch"
             }
         }
     }

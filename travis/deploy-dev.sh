@@ -8,6 +8,8 @@ echo "Branch change to dev
 sudo git checkout dev
 echo "Pulling changes from Git"
 sudo git pull origin dev
+echo "Pulling chnages from submodules"
+sudo git submodule foreach git pull origin 8.x-1.x
 echo "Running Composer Install"
 docker exec affiliates_connect_demo composer install --no-interaction
 echo "Running update entities"

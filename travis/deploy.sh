@@ -8,6 +8,8 @@ echo "Branch change to master
 sudo git checkout master
 echo "Pulling changes from Git"
 sudo git pull origin master
+echo "Pulling chnages from submodules"
+sudo git submodule foreach git pull origin 8.x-1.x
 echo "Running Composer Install"
 docker exec affiliates_connect composer install --no-interaction
 echo "Running update entities"

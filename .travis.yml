@@ -1,13 +1,22 @@
 language: bash
-
 services:
-  - docker
-  
+- docker
+addons:
+  ssh_known_hosts: 35.227.98.126
 before_script:
-  - docker network create -d bridge traefik-network
-  - docker run -d --network=traefik-network -p 80:80 -p 8080:8080 -v /var/run/docker.sock:/var/run/docker.sock --name=traefik traefik:latest --api --docker
-  - cp .env.example .env
-  - docker-compose up -d
-  
+- docker network create -d bridge traefik-network
+- docker run -d --network=traefik-network -p 80:80 -p 8080:8080 -v /var/run/docker.sock:/var/run/docker.sock
+  --name=traefik traefik:latest --api --docker
+- cp .env.example .env
+- docker-compose up -d
 script:
-  - ./travis/drupal-build.sh
+- "./travis/drupal-build.sh"
+before_install:
+- openssl aes-256-cbc -K $encrypted_2d568b83c0f0_key -iv $encrypted_2d568b83c0f0_iv
+  -in deploy_key.enc -out ./deploy_key -d
+after_success:
+- eval "$(ssh-agent -s)"
+- chmod 600 ./deploy_key
+- echo -e "Host 35.227.98.126\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+- ssh-add ./deploy_key
+- ./travis/travis-deploy.sh || travis_terminate 1;

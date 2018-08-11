@@ -4,3 +4,6 @@
 
 # Ignore .env files as they are personal
 .env
+
+travis_rsa.pub
+deploy_key

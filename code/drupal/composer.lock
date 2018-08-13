@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1074e3ff230de0ed94988953a56db8bb",
+    "content-hash": "cc0c2928cee060a0f7ddf6349724fb11",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1679,7 +1679,7 @@
                 },
                 "patches_applied": {
                     "#2983176": "https://www.drupal.org/files/issues/2018-08-06/2983176-6.patch",
-                    "#2985796": "https://www.drupal.org/files/issues/2018-07-25/2985796-11.patch",
+                    "#2985796": "https://www.drupal.org/files/issues/2018-08-13/2985796-17.patch",
                     "#2987416": "https://www.drupal.org/files/issues/2018-08-09/2987416-13.patch",
                     "#2990538": "https://www.drupal.org/files/issues/2018-08-09/2990538-7.patch",
                     "#2991976": "https://www.drupal.org/files/issues/2018-08-10/2991976-2.patch"
@@ -1705,6 +1705,105 @@
                 "source": "http://cgit.drupalcode.org/affiliates_connect"
             },
             "time": "2018-08-12T00:09:06+00:00"
+        },
+        {
+            "name": "drupal/affiliates_connect_ebay",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/affiliates_connect_ebay",
+                "reference": "6f37d95cd9239f161f8bd71cef48a5e7023ebccb"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.x-dev",
+                    "datestamp": "1534159980",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                },
+                "patches_applied": {
+                    "#2985626": "https://www.drupal.org/files/issues/2018-07-13/2985626-4.patch",
+                    "#2985702": "https://www.drupal.org/files/issues/2018-07-13/2985702-3.patch",
+                    "#2988942": "https://www.drupal.org/files/issues/2018-08-13/2988942-5.patch"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "ankitjain28may",
+                    "homepage": "https://www.drupal.org/user/3417517"
+                },
+                {
+                    "name": "dbjpanda",
+                    "homepage": "https://www.drupal.org/user/3406184"
+                }
+            ],
+            "homepage": "https://www.drupal.org/project/affiliates_connect_ebay",
+            "support": {
+                "source": "http://cgit.drupalcode.org/affiliates_connect_ebay"
+            },
+            "time": "2018-07-13T15:51:58+00:00"
+        },
+        {
+            "name": "drupal/affiliates_connect_flipkart",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/affiliates_connect_flipkart",
+                "reference": "e67e97288300bf56828ce7f5aecf0e7b6fd15e5b"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.x-dev",
+                    "datestamp": "1534159080",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                },
+                "patches_applied": {
+                    "#2984461": "https://www.drupal.org/files/issues/2018-08-13/2984461-8.patch",
+                    "#2985182": "https://www.drupal.org/files/issues/2018-08-06/2985182-4.patch"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "ankitjain28may",
+                    "homepage": "https://www.drupal.org/user/3417517"
+                },
+                {
+                    "name": "dbjpanda",
+                    "homepage": "https://www.drupal.org/user/3406184"
+                }
+            ],
+            "homepage": "https://www.drupal.org/project/affiliates_connect_flipkart",
+            "support": {
+                "source": "http://cgit.drupalcode.org/affiliates_connect_flipkart"
+            },
+            "time": "2018-07-08T18:22:05+00:00"
         },
         {
             "name": "drupal/console",
@@ -8468,6 +8567,8 @@
         "drupal/search_api_page": 20,
         "drupal/entity_comparison": 20,
         "drupal/feeds_advance_crawler": 20,
+        "drupal/affiliates_connect_flipkart": 20,
+        "drupal/affiliates_connect_ebay": 20,
         "drupal/tamper": 20
     },
     "prefer-stable": true,

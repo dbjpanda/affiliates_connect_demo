@@ -1,8 +1,0 @@
-name: 'Affiliates Connect Ebay'
-type: module
-description: 'Allows integration with Ebay Product Advertising API'
-core: 8.x
-package: 'Affiliates Connect'
-configure: affiliates_connect_ebay.settings
-dependencies:
-  - affiliates_connect

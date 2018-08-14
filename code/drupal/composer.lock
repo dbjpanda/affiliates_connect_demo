@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "cc0c2928cee060a0f7ddf6349724fb11",
+    "content-hash": "5c5da7aa60001d4a393df28d7f7cede9",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1682,7 +1682,8 @@
                     "#2985796": "https://www.drupal.org/files/issues/2018-08-13/2985796-17.patch",
                     "#2987416": "https://www.drupal.org/files/issues/2018-08-09/2987416-13.patch",
                     "#2990538": "https://www.drupal.org/files/issues/2018-08-09/2990538-7.patch",
-                    "#2991976": "https://www.drupal.org/files/issues/2018-08-10/2991976-2.patch"
+                    "#2991976": "https://www.drupal.org/files/issues/2018-08-10/2991976-2.patch",
+                    "#2992473": "https://www.drupal.org/files/issues/2018-08-14/2992473-4.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -3014,17 +3015,87 @@
             "time": "2018-08-02T04:12:21+00:00"
         },
         {
+            "name": "drupal/views_bulk_operations",
+            "version": "2.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/views_bulk_operations",
+                "reference": "8.x-2.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/views_bulk_operations-8.x-2.4.zip",
+                "reference": "8.x-2.4",
+                "shasum": "50c5778770f3a92e38ecf664301b77146e3cc931"
+            },
+            "require": {
+                "drupal/core": "^8.4"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.4",
+                    "datestamp": "1530516821",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Marcin Grabias",
+                    "homepage": "https://www.drupal.org/u/graber"
+                },
+                {
+                    "name": "Jon Pugh",
+                    "homepage": "https://www.drupal.org/user/17028"
+                },
+                {
+                    "name": "bojanz",
+                    "homepage": "https://www.drupal.org/user/86106"
+                },
+                {
+                    "name": "infojunkie",
+                    "homepage": "https://www.drupal.org/user/48424"
+                },
+                {
+                    "name": "joelpittet",
+                    "homepage": "https://www.drupal.org/user/160302"
+                }
+            ],
+            "description": "Adds an ability to perform bulk operations on selected entities from view results. Provides an API to create such operations.",
+            "homepage": "https://www.drupal.org/project/views_bulk_operations",
+            "support": {
+                "source": "http://cgit.drupalcode.org/views_bulk_operations",
+                "issues": "https://www.drupal.org/project/issues/views_bulk_operations?version=8.x",
+                "docs": "https://www.drupal.org/docs/8/modules/views-bulk-operations-vbo"
+            }
+        },
+        {
             "name": "drush/drush",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drush-ops/drush.git",
-                "reference": "e30df96a53e51b8abb278cf1c25cd29ee30af63c"
+                "reference": "0fd56c7c8986f80a090f6bf1da492ce7bc16f63f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drush-ops/drush/zipball/e30df96a53e51b8abb278cf1c25cd29ee30af63c",
-                "reference": "e30df96a53e51b8abb278cf1c25cd29ee30af63c",
+                "url": "https://api.github.com/repos/drush-ops/drush/zipball/0fd56c7c8986f80a090f6bf1da492ce7bc16f63f",
+                "reference": "0fd56c7c8986f80a090f6bf1da492ce7bc16f63f",
                 "shasum": ""
             },
             "require": {
@@ -3114,7 +3185,7 @@
             ],
             "description": "Drush is a command line shell and scripting interface for Drupal, a veritable Swiss Army knife designed to make life easier for those of us who spend some of our working hours hacking away at the command prompt.",
             "homepage": "http://www.drush.org",
-            "time": "2018-08-12T13:13:02+00:00"
+            "time": "2018-08-13T20:43:56+00:00"
         },
         {
             "name": "easyrdf/easyrdf",

@@ -28,6 +28,7 @@
         "drupal/feeds_ex": "^1.0",
         "drupal/feeds_tamper": "2.x-dev",
         "drupal/robotstxt": "^1.2",
+        "drupal/views_bulk_operations": "^2.4",
         "drupal/search_api": "1.x-dev",
         "drupal/search_api_page": "1.x-dev",
         "drupal/entity_comparison": "1.x-dev",
@@ -86,7 +87,8 @@
                 "#2985796": "https://www.drupal.org/files/issues/2018-08-13/2985796-17.patch",
                 "#2987416": "https://www.drupal.org/files/issues/2018-08-09/2987416-13.patch",
                 "#2990538": "https://www.drupal.org/files/issues/2018-08-09/2990538-7.patch",
-                "#2991976": "https://www.drupal.org/files/issues/2018-08-10/2991976-2.patch"
+                "#2991976": "https://www.drupal.org/files/issues/2018-08-10/2991976-2.patch",
+                "#2992473": "https://www.drupal.org/files/issues/2018-08-14/2992473-4.patch"
             },
             "drupal/affiliates_connect_flipkart": {
                 "#2984461": "https://www.drupal.org/files/issues/2018-08-13/2984461-8.patch",

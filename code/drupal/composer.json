@@ -92,12 +92,14 @@
             },
             "drupal/affiliates_connect_flipkart": {
                 "#2984461": "https://www.drupal.org/files/issues/2018-08-13/2984461-8.patch",
-                "#2985182": "https://www.drupal.org/files/issues/2018-08-06/2985182-4.patch"
+                "#2985182": "https://www.drupal.org/files/issues/2018-08-06/2985182-4.patch",
+                "#2993318": "https://www.drupal.org/files/issues/2018-08-17/2993318-4_0.patch"
             },
             "drupal/affiliates_connect_ebay": {
                 "#2985626": "https://www.drupal.org/files/issues/2018-07-13/2985626-4.patch",
                 "#2985702": "https://www.drupal.org/files/issues/2018-07-13/2985702-3.patch",
-                "#2988942": "https://www.drupal.org/files/issues/2018-08-13/2988942-5.patch"
+                "#2988942": "https://www.drupal.org/files/issues/2018-08-13/2988942-5.patch",
+                "#2993306": "https://www.drupal.org/files/issues/2018-08-17/2993306-2.patch"
             }
         }
     }

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "14456ca1ef9dfd90f07f7834d1e160bd",
+    "content-hash": "01f3e566519fa1e027223381ced5806e",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1682,7 +1682,8 @@
                     "#2987416": "https://www.drupal.org/files/issues/2018-08-09/2987416-13.patch",
                     "#2990538": "https://www.drupal.org/files/issues/2018-08-09/2990538-7.patch",
                     "#2991976": "https://www.drupal.org/files/issues/2018-08-10/2991976-2.patch",
-                    "#2992473": "https://www.drupal.org/files/issues/2018-08-17/2992473-12.patch"
+                    "#2992473": "https://www.drupal.org/files/issues/2018-08-17/2992473-12.patch",
+                    "#2993369": "https://www.drupal.org/files/issues/2018-08-17/2993369-2.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",

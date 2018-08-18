@@ -28,10 +28,13 @@
         "drupal/feeds_ex": "^1.0",
         "drupal/feeds_tamper": "2.x-dev",
         "drupal/robotstxt": "^1.2",
+        "drupal/views_bulk_operations": "^2.4",
         "drupal/search_api": "1.x-dev",
         "drupal/search_api_page": "1.x-dev",
         "drupal/entity_comparison": "1.x-dev",
         "drupal/feeds_advance_crawler": "1.x-dev",
+        "drupal/affiliates_connect_flipkart": "1.x-dev",
+        "drupal/affiliates_connect_ebay": "1.x-dev",
         "drupal/tamper": "1.x-dev",
         "drush/drush": "^9.0.0",
         "vlucas/phpdotenv": "^2.4",
@@ -81,10 +84,23 @@
         "patches": {
             "drupal/affiliates_connect": {
                 "#2983176": "https://www.drupal.org/files/issues/2018-08-06/2983176-6.patch",
-                "#2985796": "https://www.drupal.org/files/issues/2018-07-25/2985796-11.patch",
+                "#2985796": "https://www.drupal.org/files/issues/2018-08-13/2985796-17.patch",
                 "#2987416": "https://www.drupal.org/files/issues/2018-08-09/2987416-13.patch",
                 "#2990538": "https://www.drupal.org/files/issues/2018-08-09/2990538-7.patch",
-                "#2991976": "https://www.drupal.org/files/issues/2018-08-10/2991976-2.patch"
+                "#2991976": "https://www.drupal.org/files/issues/2018-08-10/2991976-2.patch",
+                "#2992473": "https://www.drupal.org/files/issues/2018-08-17/2992473-12.patch",
+                "#2993369": "https://www.drupal.org/files/issues/2018-08-17/2993369-2.patch"
+            },
+            "drupal/affiliates_connect_flipkart": {
+                "#2984461": "https://www.drupal.org/files/issues/2018-08-13/2984461-8.patch",
+                "#2985182": "https://www.drupal.org/files/issues/2018-08-06/2985182-4.patch",
+                "#2993318": "https://www.drupal.org/files/issues/2018-08-17/2993318-4_0.patch"
+            },
+            "drupal/affiliates_connect_ebay": {
+                "#2985626": "https://www.drupal.org/files/issues/2018-07-13/2985626-4.patch",
+                "#2985702": "https://www.drupal.org/files/issues/2018-07-13/2985702-3.patch",
+                "#2988942": "https://www.drupal.org/files/issues/2018-08-13/2988942-5.patch",
+                "#2993306": "https://www.drupal.org/files/issues/2018-08-17/2993306-2.patch"
             }
         }
     }

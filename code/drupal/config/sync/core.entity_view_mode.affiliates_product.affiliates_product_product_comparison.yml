@@ -1,0 +1,10 @@
+uuid: ab30e983-cd0c-43d9-8294-6a9eb289e15d
+langcode: en
+status: true
+dependencies:
+  module:
+    - affiliates_connect
+id: affiliates_product.affiliates_product_product_comparison
+label: 'Product Comparison'
+targetEntityType: affiliates_product
+cache: true

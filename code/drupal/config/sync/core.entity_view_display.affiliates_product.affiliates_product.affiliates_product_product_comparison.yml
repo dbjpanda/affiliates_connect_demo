@@ -1,0 +1,189 @@
+uuid: f749eecf-bcc8-4a50-be36-b00cec993f36
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.affiliates_product.affiliates_product_product_comparison
+    - field.field.affiliates_product.affiliates_product.feeds_item
+  module:
+    - affiliates_connect
+id: affiliates_product.affiliates_product.affiliates_product_product_comparison
+targetEntityType: affiliates_product
+bundle: affiliates_product
+mode: affiliates_product_product_comparison
+content:
+  cloaking_url:
+    label: visually_hidden
+    type: cloak_link
+    weight: 19
+    region: content
+    settings:
+      title: 'View Product'
+    third_party_settings: {  }
+  cod_available:
+    label: hidden
+    type: boolean
+    weight: 12
+    region: content
+    settings:
+      format: yes-no
+      format_custom_true: ''
+      format_custom_false: ''
+    third_party_settings: {  }
+  color:
+    label: hidden
+    type: string
+    weight: 15
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  currency:
+    label: hidden
+    type: string
+    weight: 4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  discount_percentage:
+    label: hidden
+    type: number_decimal
+    weight: 8
+    region: content
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+  image_urls:
+    label: hidden
+    type: uri_to_image
+    weight: 2
+    region: content
+    settings:
+      width: 40
+      height: 40
+    third_party_settings: {  }
+  in_stock:
+    label: hidden
+    type: boolean
+    weight: 11
+    region: content
+    settings:
+      format: yes-no
+      format_custom_true: ''
+      format_custom_false: ''
+    third_party_settings: {  }
+  maximum_retail_price:
+    label: hidden
+    type: string
+    weight: 5
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  name:
+    label: hidden
+    type: string
+    weight: 0
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  offers:
+    label: hidden
+    type: basic_string
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  plugin_id:
+    type: string
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  product_brand:
+    label: hidden
+    type: string
+    weight: 9
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  product_description:
+    label: hidden
+    type: basic_string
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  product_family:
+    label: hidden
+    type: string
+    weight: 13
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  product_warranty:
+    label: hidden
+    type: basic_string
+    weight: 16
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  seller_average_rating:
+    label: hidden
+    type: string
+    weight: 18
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  seller_name:
+    label: hidden
+    type: string
+    weight: 17
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  size:
+    label: hidden
+    type: string
+    weight: 14
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  vendor_selling_price:
+    label: hidden
+    type: string
+    weight: 6
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  vendor_special_price:
+    label: hidden
+    type: string
+    weight: 7
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  additional_data: true
+  feeds_item: true
+  hits_count: true
+  langcode: true
+  link_for_entity_comparison_compare_products: true
+  link_for_entity_comparison_product_comparison: true
+  product_id: true
+  product_url: true
+  uid: true

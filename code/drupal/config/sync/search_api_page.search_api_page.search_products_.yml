@@ -1,0 +1,21 @@
+uuid: 75528114-9fb2-4be7-b62a-ea00876377d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.default_index
+id: search_products_
+label: 'Search Products'
+path: /search-pro
+clean_url: true
+show_all_when_no_keys: false
+index: default_index
+limit: 10
+searched_fields:
+  name: name
+  product_brand: product_brand
+  product_family: product_family
+style: view_modes
+view_mode_configuration:
+  'entity:affiliates_product_affiliates_product': affiliates_product_product_comparison
+show_search_form: true

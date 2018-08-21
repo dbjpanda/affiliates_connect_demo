@@ -1,4 +1,5 @@
-nodejs_host: 'test.node'
+nodejs_host: affiliates_connect_demo.node
 nodejs_port: '9000'
 _core:
   default_config_hash: _tgJ7a0S-Qk55b1_7-tQwJs7LzHpccHTG97rWk_pKvo
+proxy: ''

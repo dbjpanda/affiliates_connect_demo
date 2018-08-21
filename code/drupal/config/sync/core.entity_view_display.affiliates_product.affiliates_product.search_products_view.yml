@@ -1,0 +1,52 @@
+uuid: fe000825-77bb-41c2-81c4-f3de7cf2ac7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.affiliates_product.search_products_view
+    - field.field.affiliates_product.affiliates_product.feeds_item
+  module:
+    - affiliates_connect
+    - entity_comparison
+id: affiliates_product.affiliates_product.search_products_view
+targetEntityType: affiliates_product
+bundle: affiliates_product
+mode: search_products_view
+content:
+  link_for_entity_comparison_product_comparison:
+    type: entity_comparison_link
+    label: hidden
+    weight: 0
+    settings:
+      enitity_comparison: product_comparison
+    region: content
+    third_party_settings: {  }
+hidden:
+  additional_data: true
+  cloaking_url: true
+  cod_available: true
+  color: true
+  currency: true
+  discount_percentage: true
+  feeds_item: true
+  hits_count: true
+  image_urls: true
+  in_stock: true
+  langcode: true
+  link_for_entity_comparison_compare_products: true
+  maximum_retail_price: true
+  name: true
+  offers: true
+  plugin_id: true
+  product_brand: true
+  product_description: true
+  product_family: true
+  product_id: true
+  product_url: true
+  product_warranty: true
+  seller_average_rating: true
+  seller_name: true
+  size: true
+  uid: true
+  vendor_selling_price: true
+  vendor_special_price: true

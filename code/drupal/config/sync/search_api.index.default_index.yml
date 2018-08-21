@@ -1,0 +1,175 @@
+uuid: 668f5a95-5c6b-4d99-9fd4-6a8a1d48f752
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.server.default_server
+    - core.entity_view_mode.affiliates_product.search_products_view
+  module:
+    - search_api
+    - affiliates_connect
+_core:
+  default_config_hash: GLmLegZGHtMF6annRqgjizJAoiAip-IT-XOsDMCZfog
+id: default_index
+name: 'Default content index'
+description: 'Default content index created by the Database Search Defaults module'
+read_only: false
+field_settings:
+  name:
+    label: 'Product Name'
+    datasource_id: 'entity:affiliates_product'
+    property_path: name
+    type: text
+  product_brand:
+    label: 'Product Brand'
+    datasource_id: 'entity:affiliates_product'
+    property_path: product_brand
+    type: text
+  product_family:
+    label: 'Product Category'
+    datasource_id: 'entity:affiliates_product'
+    property_path: product_family
+    type: text
+  rendered_item:
+    label: 'Rendered item'
+    property_path: rendered_item
+    type: text
+    configuration:
+      roles:
+        administrator: administrator
+        anonymous: anonymous
+        authenticated: authenticated
+      view_mode:
+        'entity:affiliates_product':
+          affiliates_product: search_products_view
+datasource_settings:
+  'entity:affiliates_product': {  }
+processor_settings:
+  add_url:
+    weights:
+      preprocess_index: -30
+  aggregated_field:
+    weights:
+      add_properties: 20
+  highlight:
+    highlight: always
+    highlight_partial: false
+    excerpt: true
+    excerpt_length: 256
+    exclude_fields:
+      - name
+      - product_brand
+      - product_family
+      - rendered_item
+    prefix: '<strong>'
+    suffix: '</strong>'
+    weights:
+      postprocess_query: 0
+  html_filter:
+    all_fields: true
+    fields:
+      - name
+      - product_brand
+      - product_family
+      - rendered_item
+    title: true
+    alt: true
+    tags:
+      b: 2
+      h1: 5
+      h2: 3
+      h3: 2
+      string: 2
+    weights:
+      preprocess_index: -3
+      preprocess_query: -6
+  ignorecase:
+    all_fields: true
+    fields:
+      - name
+      - product_brand
+      - product_family
+      - rendered_item
+    weights:
+      preprocess_index: -5
+      preprocess_query: -8
+  rendered_item:
+    weights:
+      add_properties: 0
+      pre_index_save: -10
+  stopwords:
+    all_fields: true
+    fields:
+      - name
+      - product_brand
+      - product_family
+      - rendered_item
+    stopwords:
+      - a
+      - an
+      - and
+      - are
+      - as
+      - at
+      - be
+      - but
+      - by
+      - for
+      - if
+      - in
+      - into
+      - is
+      - it
+      - 'no'
+      - not
+      - of
+      - 'on'
+      - or
+      - s
+      - such
+      - t
+      - that
+      - the
+      - their
+      - then
+      - there
+      - these
+      - they
+      - this
+      - to
+      - was
+      - will
+      - with
+    weights:
+      preprocess_index: -5
+      preprocess_query: -10
+  tokenizer:
+    all_fields: true
+    fields:
+      - name
+      - product_brand
+      - product_family
+      - rendered_item
+    spaces: ''
+    overlap_cjk: 1
+    minimum_word_size: '3'
+    weights:
+      preprocess_index: -2
+      preprocess_query: -5
+  transliteration:
+    all_fields: true
+    fields:
+      - name
+      - product_brand
+      - product_family
+      - rendered_item
+    weights:
+      preprocess_index: -4
+      preprocess_query: -7
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+server: default_server

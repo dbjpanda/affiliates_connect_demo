@@ -1,0 +1,21 @@
+uuid: 308f1933-4f16-4b32-86dd-8d966116053a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_product_names
+    - node.type.products
+id: node.products.field_product_names
+field_name: field_product_names
+entity_type: node
+bundle: products
+label: 'Product Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:affiliates_product'
+  handler_settings: {  }
+field_type: entity_reference

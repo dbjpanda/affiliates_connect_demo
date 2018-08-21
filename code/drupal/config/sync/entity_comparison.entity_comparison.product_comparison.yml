@@ -1,0 +1,11 @@
+uuid: b37220ec-4ff4-4442-8309-f5f3ce48cbe8
+langcode: en
+status: true
+dependencies: {  }
+id: product_comparison
+label: 'Product Comparison'
+add_link_text: 'Add to comparison list'
+remove_link_text: 'Remove from the comparison'
+limit: 0
+entity_type: affiliates_product
+bundle_type: affiliates_product

@@ -1,0 +1,50 @@
+uuid: 4a73bdb6-342e-42d5-871c-2d870de61f37
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.affiliates_product_entity_browser
+  module:
+    - affiliates_product_entity_browser
+    - views
+_core:
+  default_config_hash: JVsGEe9NCnkyBxmWLT7CgLZhlkYF_bZeVnteTgYq_fU
+name: affiliates_product_entity_browser
+label: 'Affiliates Product Entity Browser'
+display: iframe
+display_configuration:
+  width: '650'
+  height: '500'
+  link_text: 'Select products'
+  auto_open: false
+selection_display: multi_step_display
+selection_display_configuration:
+  entity_type: affiliates_product
+  display: rendered_entity
+  display_settings:
+    view_mode: affiliates_product_product_comparison
+  select_text: 'Use selected'
+  selection_hidden: false
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  99531776-62f3-4597-950e-ca67ba76b5f8:
+    settings:
+      view: affiliates_product_entity_browser
+      view_display: entity_browser_1
+      submit_text: 'Select products'
+      auto_select: false
+    uuid: 99531776-62f3-4597-950e-ca67ba76b5f8
+    weight: 1
+    label: view
+    id: view
+  797ec215-2f4a-4bd2-bd19-10e12be2155c:
+    settings:
+      entity_type: affiliates_product
+      bundle: affiliates_product
+      form_mode: default
+      submit_text: 'Select products'
+    uuid: 797ec215-2f4a-4bd2-bd19-10e12be2155c
+    weight: 3
+    label: search
+    id: search

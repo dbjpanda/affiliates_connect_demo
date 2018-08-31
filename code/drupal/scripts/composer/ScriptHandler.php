@@ -42,36 +42,36 @@ class ScriptHandler {
         require_once $drupalRoot . '/core/includes/install.inc';
         require_once 'vendor/autoload.php';
         $settings['config_directories'] = [
-            CONFIG_SYNC_DIRECTORY => (object) [
-                'value' => Path::makeRelative($drupalFinder->getComposerRoot() . '/config/sync', $drupalRoot),
-                'required' => TRUE,
-            ],
+          CONFIG_SYNC_DIRECTORY => (object) [
+            'value' => Path::makeRelative($drupalFinder->getComposerRoot() . '/config/sync', $drupalRoot),
+            'required' => TRUE,
+          ],
         ];
         $settings['config'] = [
-            'content_directory' => (object) [
-                'value' => Path::makeRelative($drupalFinder->getComposerRoot() . '/content/sync', $drupalRoot),
-                'required' => TRUE,
-            ],
+          'content_directory' => (object) [
+            'value' => Path::makeRelative($drupalFinder->getComposerRoot() . '/content/sync', $drupalRoot),
+            'required' => TRUE,
+          ],
         ];
       if ($fs->exists(".env")) {
-            $settings['databases'] = [
-                'default' => [
-                    'default' => (object)[
-                        'value' => array(
-                            'database' => getenv('MYSQL_DATABASE'),
-                            'username' => getenv('MYSQL_USER'),
-                            'password' => getenv('MYSQL_PASSWORD'),
-                            'prefix' => '',
-                            'host' => getenv('MYSQL_HOSTNAME'),
-                            'port' => getenv('MYSQL_PORT'),
-                            'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-                            'driver' => 'mysql',
-                        ),
-                        'required' => TRUE,
-                    ]
-                ],
-            ];
-        }
+        $settings['databases'] = [
+          'default' => [
+            'default' => (object)[
+              'value' => array(
+                'database' => getenv('MYSQL_DATABASE'),
+                'username' => getenv('MYSQL_USER'),
+                'password' => getenv('MYSQL_PASSWORD'),
+                'prefix' => '',
+                'host' => getenv('MYSQL_HOSTNAME'),
+                'port' => getenv('MYSQL_PORT'),
+                'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+                'driver' => 'mysql',
+              ),
+              'required' => TRUE,
+            ]
+          ],
+        ];
+      }
       drupal_rewrite_settings($settings, $drupalRoot . '/sites/default/settings.php');
       $fs->chmod($drupalRoot . '/sites/default/settings.php', 0666);
       $event->getIO()->write("Create a sites/default/settings.php file with chmod 0666");

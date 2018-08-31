@@ -1,7 +1,9 @@
-uuid: c77724e8-8eb8-4772-84f0-a891dc434f23
+uuid: 20942b73-3679-42ad-b94a-a68ee4683859
 langcode: en
 status: true
 dependencies:
+  config:
+    - field.field.affiliates_product.affiliates_product.feeds_item
   module:
     - affiliates_connect
 id: affiliates_product.affiliates_product.default
@@ -10,23 +12,31 @@ bundle: affiliates_product
 mode: default
 content:
   additional_data:
-    type: string_textfield
-    weight: -4
+    type: string_textarea
+    weight: 22
     region: content
     settings:
-      size: 60
       placeholder: ''
+      rows: 5
+    third_party_settings: {  }
+  cloaking_url:
+    type: string_textarea
+    weight: 21
+    region: content
+    settings:
+      placeholder: ''
+      rows: 5
     third_party_settings: {  }
   cod_available:
     type: boolean_checkbox
-    weight: -4
+    weight: 14
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   color:
     type: string_textfield
-    weight: -4
+    weight: 17
     region: content
     settings:
       size: 60
@@ -34,23 +44,22 @@ content:
     third_party_settings: {  }
   currency:
     type: string_textfield
-    weight: -4
+    weight: 6
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   discount_percentage:
-    type: string_textfield
-    weight: -4
+    type: number
+    weight: 10
     region: content
     settings:
-      size: 60
       placeholder: ''
     third_party_settings: {  }
   image_urls:
-    type: string_textfield
-    weight: -4
+    type: uri
+    weight: 5
     region: content
     settings:
       size: 60
@@ -58,7 +67,7 @@ content:
     third_party_settings: {  }
   in_stock:
     type: boolean_checkbox
-    weight: -4
+    weight: 13
     region: content
     settings:
       display_label: true
@@ -72,7 +81,7 @@ content:
     third_party_settings: {  }
   maximum_retail_price:
     type: string_textfield
-    weight: -4
+    weight: 7
     region: content
     settings:
       size: 60
@@ -80,23 +89,23 @@ content:
     third_party_settings: {  }
   name:
     type: string_textfield
-    weight: -4
+    weight: 0
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   offers:
-    type: string_textfield
-    weight: -4
+    type: string_textarea
+    weight: 12
     region: content
     settings:
-      size: 60
       placeholder: ''
+      rows: 5
     third_party_settings: {  }
   plugin_id:
     type: string_textfield
-    weight: -4
+    weight: 1
     region: content
     settings:
       size: 60
@@ -104,23 +113,23 @@ content:
     third_party_settings: {  }
   product_brand:
     type: string_textfield
-    weight: -4
+    weight: 11
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   product_description:
-    type: string_textfield
-    weight: -4
+    type: string_textarea
+    weight: 3
     region: content
     settings:
-      size: 60
       placeholder: ''
+      rows: 5
     third_party_settings: {  }
   product_family:
     type: string_textfield
-    weight: -4
+    weight: 15
     region: content
     settings:
       size: 60
@@ -128,31 +137,31 @@ content:
     third_party_settings: {  }
   product_id:
     type: string_textfield
-    weight: -4
+    weight: 2
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   product_url:
-    type: string_textfield
-    weight: -4
+    type: uri
+    weight: 4
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   product_warranty:
-    type: string_textfield
-    weight: -4
+    type: string_textarea
+    weight: 18
     region: content
     settings:
-      size: 60
       placeholder: ''
+      rows: 5
     third_party_settings: {  }
   seller_average_rating:
     type: string_textfield
-    weight: -4
+    weight: 20
     region: content
     settings:
       size: 60
@@ -160,7 +169,7 @@ content:
     third_party_settings: {  }
   seller_name:
     type: string_textfield
-    weight: -4
+    weight: 19
     region: content
     settings:
       size: 60
@@ -168,7 +177,7 @@ content:
     third_party_settings: {  }
   size:
     type: string_textfield
-    weight: -4
+    weight: 16
     region: content
     settings:
       size: 60
@@ -185,7 +194,7 @@ content:
     third_party_settings: {  }
   vendor_selling_price:
     type: string_textfield
-    weight: -4
+    weight: 8
     region: content
     settings:
       size: 60
@@ -193,10 +202,11 @@ content:
     third_party_settings: {  }
   vendor_special_price:
     type: string_textfield
-    weight: -4
+    weight: 9
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  feeds_item: true

@@ -1,4 +1,4 @@
-uuid: 67443165-048e-4b3b-8619-99e0483c9ee8
+uuid: 7e0e934d-fc3d-4b0e-9932-0d9c9b07cf9d
 langcode: en
 status: true
 dependencies:
@@ -16,109 +16,117 @@ third_party_settings:
         plugin: trim
         source: producttitle
         weight: -9
-        uuid: da382b69-b5ec-4ba3-b267-ace7b11c1efb
       d5ef3cba-d964-45ea-9466-e99556d56a5b:
         separator: '='
         plugin: end
         source: product_brand_feed
         weight: 0
-        uuid: d5ef3cba-d964-45ea-9466-e99556d56a5b
       d62eb252-02b6-4cf0-8d2a-64d266ba6fe3:
         plugin: stock
         source: availability
         weight: -9
-        uuid: d62eb252-02b6-4cf0-8d2a-64d266ba6fe3
       d3b07bcd-54d9-4284-9a0b-2ab45639e209:
         default_value: ₹
         only_if_empty: false
         plugin: default_value
         source: _currency
         weight: 0
-        uuid: d3b07bcd-54d9-4284-9a0b-2ab45639e209
-      d792d02f-9fad-44ce-acc6-39ce9d2ebbbf:
-        glue: ''
-        plugin: implode
-        source: product_category_feed
-        weight: 0
-        uuid: d792d02f-9fad-44ce-acc6-39ce9d2ebbbf
       870792d5-5787-49d4-87d8-8b1f4cd8b016:
         regex: '/\(([A-Za-z0-9 .|]+?)\)/'
         index: 1
         plugin: regex
         source: product_seller_rating
         weight: 0
-        uuid: 870792d5-5787-49d4-87d8-8b1f4cd8b016
       c4368cb7-e30f-44d9-b9b3-c86511b52401:
         default_value: affiliates_connect_amazon
         only_if_empty: false
         plugin: default_value
         source: _plugin_id
         weight: 0
-        uuid: c4368cb7-e30f-44d9-b9b3-c86511b52401
       14b0c816-fee7-4be3-9fdd-4559920e813e:
         character: ''
         side: trim
         plugin: trim
         source: product_description_feed
         weight: -9
-        uuid: 14b0c816-fee7-4be3-9fdd-4559920e813e
       a5a89fac-accf-47e6-84a7-c0fb7abb450b:
         default_value: ' '
         only_if_empty: true
         plugin: default_value
         source: product_description_feed
         weight: -10
-        uuid: a5a89fac-accf-47e6-84a7-c0fb7abb450b
       b7ce0091-2ca5-4b45-8c1f-84ad9ee0f464:
         default_value: ' '
         only_if_empty: true
         plugin: default_value
         source: product_mrp_feed
         weight: 0
-        uuid: b7ce0091-2ca5-4b45-8c1f-84ad9ee0f464
       313d3c6d-de87-4c2f-8712-828b38ff9d47:
         character: ''
         side: trim
         plugin: trim
         source: product_mrp_feed
         weight: 1
-        uuid: 313d3c6d-de87-4c2f-8712-828b38ff9d47
       d624719b-a713-48a0-b0a0-1117dec78851:
         default_value: ' '
         only_if_empty: true
         plugin: default_value
         source: product_price_feed
         weight: 0
-        uuid: d624719b-a713-48a0-b0a0-1117dec78851
       93a33c7c-a4c7-4bd2-a2cc-859bb84e0e43:
         character: ''
         side: trim
         plugin: trim
         source: product_price_feed
         weight: 1
-        uuid: 93a33c7c-a4c7-4bd2-a2cc-859bb84e0e43
       e53c2316-667a-455e-a3af-169a48389841:
         default_value: ' '
         only_if_empty: true
         plugin: default_value
         source: sale_or_deal_price
         weight: 0
-        uuid: e53c2316-667a-455e-a3af-169a48389841
       2059ba7b-b832-4556-88b6-fbaf53ed844c:
         character: ''
         side: trim
         plugin: trim
         source: sale_or_deal_price
         weight: 1
-        uuid: 2059ba7b-b832-4556-88b6-fbaf53ed844c
       169522df-298f-41dc-9f56-9b7e051740f0:
         base_url: 'https://amazon.in'
         plugin: url
         source: product_url_feed
         weight: 0
-        uuid: 169522df-298f-41dc-9f56-9b7e051740f0
+      1bd9aeaf-d301-440f-bde9-0100e56aeb85:
+        default_value: '[]'
+        only_if_empty: true
+        plugin: default_value
+        source: product_category_feed
+        weight: -10
+      7692fceb-c91f-4fab-be30-d6c542f41ba0:
+        glue: ''
+        plugin: affiliates_connect_implode
+        source: product_category_feed
+        weight: -9
+      30db2571-52d5-45a2-bfe2-14a64ab8c6a4:
+        default_value: ' '
+        only_if_empty: true
+        plugin: default_value
+        source: producttitle
+        weight: -10
+      64bb23ed-de7f-45d7-b8d4-499ed5bb9332:
+        regex: '/\(([0-9.]+?)%\)/'
+        index: 1
+        plugin: regex
+        source: discount
+        weight: 0
+      1b10d7dd-42b6-4a0e-96d2-05e35edc504e:
+        glue: \n
+        plugin: affiliates_connect_implode
+        source: review
+        weight: 0
+        uuid: 1b10d7dd-42b6-4a0e-96d2-05e35edc504e
 _core:
-  default_config_hash: onHst_Ni-8UcXrRfXKjw8ris_H-yDojNS0QzMOfRVQg
+  default_config_hash: bbz9NSzClBhdrUJDne902aXPwymCPp2x9DiQ6BuWyLI
 label: 'Amazon Feed Type 1'
 id: amazon_feed_type_1
 description: 'Enable to fetch products from categories pages with class="s-result-item.s-result-card-for-container.a-declarative.celwidget  "'
@@ -185,9 +193,9 @@ parser_configuration:
     product_color:
       label: './crawler//div[@id=''variation_color_name'']/div/span/text()'
       value: './crawler//div[@id=''variation_color_name'']/div/span/text()'
-    product_size_feed:
-      label: './crawler//div[@id=''variation_size_name'']//select[@id=''native_dropdown_selected_size_name'']/option[@class=''dropdownSelect''][1]'
-      value: './crawler//div[@id=''variation_size_name'']//select[@id=''native_dropdown_selected_size_name'']/option[@class=''dropdownSelect''][1]'
+    review:
+      label: './crawler//div[@data-hook=''review-collapsed'']/text()'
+      value: './crawler//div[@data-hook=''review-collapsed'']/text()'
   use_tidy: false
   display_errors: false
   source_encoding:
@@ -281,6 +289,10 @@ custom_sources:
     label: './crawler//div[@id=''variation_size_name'']//select[@id=''native_dropdown_selected_size_name'']/option[@class=''dropdownSelect''][1]'
     value: './crawler//div[@id=''variation_size_name'']//select[@id=''native_dropdown_selected_size_name'']/option[@class=''dropdownSelect''][1]'
     machine_name: product_size_feed
+  review:
+    label: './crawler//div[@data-hook=''review-collapsed'']/text()'
+    value: './crawler//div[@data-hook=''review-collapsed'']/text()'
+    machine_name: review
 mappings:
   -
     target: name
@@ -301,6 +313,7 @@ mappings:
     target: product_url
     map:
       value: product_url_feed
+    unique: {  }
   -
     target: product_description
     map:
@@ -329,6 +342,7 @@ mappings:
     target: image_urls
     map:
       value: product_image_url_feed
+    unique: {  }
   -
     target: in_stock
     map:
@@ -369,7 +383,6 @@ mappings:
       value: product_color
     unique: {  }
   -
-    target: size
+    target: additional_data
     map:
-      value: product_size_feed
-    unique: {  }
+      value: review

@@ -1,0 +1,29 @@
+uuid: 97678d2a-154a-45b6-b2f8-0730ffa0fc1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_comparison.entity_comparison.product_comparison
+  module:
+    - affiliates_connect_compare
+    - system
+  theme:
+    - bartik
+id: productcomparison_2
+theme: bartik
+region: content
+weight: -3
+provider: null
+plugin: 'affiliates_comparison_block:product_comparison'
+settings:
+  id: 'affiliates_comparison_block:product_comparison'
+  label: 'Product Comparison'
+  provider: affiliates_connect_compare
+  label_display: visible
+  link_text: 'Compare @count items'
+visibility:
+  request_path:
+    id: request_path
+    pages: /search
+    negate: false
+    context_mapping: {  }

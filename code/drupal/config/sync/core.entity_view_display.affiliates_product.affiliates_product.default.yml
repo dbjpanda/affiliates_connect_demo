@@ -1,35 +1,39 @@
-uuid: e5c86e20-52e1-4807-9cc7-d32554423349
+uuid: ba2a4570-1d51-4db9-8b72-432e840fea63
 langcode: en
 status: true
 dependencies:
+  config:
+    - field.field.affiliates_product.affiliates_product.feeds_item
   module:
     - affiliates_connect
-    - user
+    - entity_comparison
 id: affiliates_product.affiliates_product.default
 targetEntityType: affiliates_product
 bundle: affiliates_product
 mode: default
 content:
-  additional_data:
+  cloaking_url:
     label: above
-    type: string
-    weight: -4
+    type: cloak_link
+    weight: 18
     region: content
     settings:
-      link_to_entity: false
+      title: 'View Product'
     third_party_settings: {  }
   cod_available:
     label: above
-    type: string
-    weight: -4
+    type: boolean
+    weight: 11
     region: content
     settings:
-      link_to_entity: false
+      format: yes-no
+      format_custom_true: ''
+      format_custom_false: ''
     third_party_settings: {  }
   color:
     label: above
     type: string
-    weight: -4
+    weight: 14
     region: content
     settings:
       link_to_entity: false
@@ -37,39 +41,53 @@ content:
   currency:
     label: above
     type: string
-    weight: -4
+    weight: 3
     region: content
     settings:
       link_to_entity: false
     third_party_settings: {  }
   discount_percentage:
     label: above
-    type: string
-    weight: -4
+    type: number_decimal
+    weight: 7
     region: content
     settings:
-      link_to_entity: false
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
     third_party_settings: {  }
   image_urls:
     label: above
-    type: string
-    weight: -4
+    type: uri_to_image
+    weight: 2
     region: content
     settings:
-      link_to_entity: false
+      width: 40
+      height: 40
     third_party_settings: {  }
   in_stock:
     label: above
-    type: string
-    weight: -4
+    type: boolean
+    weight: 10
     region: content
     settings:
-      link_to_entity: false
+      format: yes-no
+      format_custom_true: ''
+      format_custom_false: ''
+    third_party_settings: {  }
+  link_for_entity_comparison_product_comparison:
+    type: entity_comparison_link
+    label: hidden
+    weight: 19
+    settings:
+      enitity_comparison: product_comparison
+    region: content
     third_party_settings: {  }
   maximum_retail_price:
     label: above
     type: string
-    weight: -4
+    weight: 4
     region: content
     settings:
       link_to_entity: false
@@ -77,79 +95,52 @@ content:
   name:
     label: above
     type: string
-    weight: -4
+    weight: 0
     region: content
     settings:
       link_to_entity: false
     third_party_settings: {  }
   offers:
     label: above
-    type: string
-    weight: -4
+    type: basic_string
+    weight: 9
     region: content
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-  plugin_id:
-    label: above
-    type: string
-    weight: -4
-    region: content
-    settings:
-      link_to_entity: false
+    settings: {  }
     third_party_settings: {  }
   product_brand:
     label: above
     type: string
-    weight: -4
+    weight: 8
     region: content
     settings:
       link_to_entity: false
     third_party_settings: {  }
   product_description:
     label: above
-    type: string
-    weight: -4
+    type: basic_string
+    weight: 1
     region: content
-    settings:
-      link_to_entity: false
+    settings: {  }
     third_party_settings: {  }
   product_family:
     label: above
     type: string
-    weight: -4
-    region: content
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-  product_id:
-    label: above
-    type: string
-    weight: -4
-    region: content
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-  product_url:
-    label: above
-    type: string
-    weight: -4
+    weight: 12
     region: content
     settings:
       link_to_entity: false
     third_party_settings: {  }
   product_warranty:
     label: above
-    type: string
-    weight: -4
+    type: basic_string
+    weight: 15
     region: content
-    settings:
-      link_to_entity: false
+    settings: {  }
     third_party_settings: {  }
   seller_average_rating:
     label: above
     type: string
-    weight: -4
+    weight: 17
     region: content
     settings:
       link_to_entity: false
@@ -157,7 +148,7 @@ content:
   seller_name:
     label: above
     type: string
-    weight: -4
+    weight: 16
     region: content
     settings:
       link_to_entity: false
@@ -165,22 +156,15 @@ content:
   size:
     label: above
     type: string
-    weight: -4
+    weight: 13
     region: content
     settings:
       link_to_entity: false
     third_party_settings: {  }
-  uid:
-    label: hidden
-    type: author
-    weight: 0
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   vendor_selling_price:
     label: above
     type: string
-    weight: -4
+    weight: 5
     region: content
     settings:
       link_to_entity: false
@@ -188,10 +172,18 @@ content:
   vendor_special_price:
     label: above
     type: string
-    weight: -4
+    weight: 6
     region: content
     settings:
       link_to_entity: false
     third_party_settings: {  }
 hidden:
+  additional_data: true
+  feeds_item: true
+  hits_count: true
   langcode: true
+  link_for_entity_comparison_compare_products: true
+  plugin_id: true
+  product_id: true
+  product_url: true
+  uid: true

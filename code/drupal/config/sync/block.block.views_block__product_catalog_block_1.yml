@@ -1,0 +1,24 @@
+uuid: d3923b79-be95-4059-be8a-f2c6199b28a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.product_catalog
+  module:
+    - views
+  theme:
+    - bartik
+id: views_block__product_catalog_block_1
+theme: bartik
+region: sidebar_first
+weight: -5
+provider: null
+plugin: 'views_block:product_catalog-block_1'
+settings:
+  id: 'views_block:product_catalog-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility: {  }

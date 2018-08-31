@@ -1,0 +1,10 @@
+uuid: 8941a067-0cd0-401e-a839-0bf089caea1d
+langcode: en
+status: true
+dependencies:
+  module:
+    - affiliates_connect
+id: affiliates_product.search_products_view
+label: 'Search Products view'
+targetEntityType: affiliates_product
+cache: true

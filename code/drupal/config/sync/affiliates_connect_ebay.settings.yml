@@ -1,0 +1,14 @@
+native_api: true
+locale: IN
+ebay_app_id: AnkitJai-affiliat-PRD-88bb06b1d-8352ab5d
+service_endpoint: production
+search: true
+data_storage: true
+full_content: true
+price: false
+available: false
+size: false
+color: false
+offers: false
+_core:
+  default_config_hash: PFcNJjczLxJNlKALGS-5jnKMOCoByv1XemWqpCZ5eIg
